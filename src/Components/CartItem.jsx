@@ -6,16 +6,14 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 function CartItem({ cartItem }) {
   const { cart } = useSelector((state) => state);
-
-  console.log(cartItem);
   
   const dispatch = useDispatch();
   
   function removeFromCart() {
-    dispatch(remove(cartItem));
+    dispatch(remove(cartItem.id));
     toast.error("Item Removed");
   }
-  
+
   return (
     <div>
       <div>

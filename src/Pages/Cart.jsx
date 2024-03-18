@@ -5,7 +5,6 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 function Cart() {
   const { cart } = useSelector((state) => state);
   const [totalAmount,setTotalAmout] = useState(0);
-  console.log(cart)
 
   useEffect(()=>{
     setTotalAmout(cart.reduce((acc,curr)=>acc+curr.price , 0))
@@ -17,7 +16,7 @@ function Cart() {
         <div>
           <div>
             {cart.map((cartItem) => (
-              <CartItem key={cartItem.id} cartitem={cartItem}></CartItem>
+              <CartItem key={cartItem.id} cartItem={cartItem}></CartItem>
             ))}
           </div>
 

@@ -20,13 +20,13 @@ function Home() {
   useEffect(() => {
     fetchData();
   }, []);
-  
+
   return (
-    <div>
+    <div className="w-full flex justify-center items-center">
       {loading ? (
         <Spinner></Spinner>
       ) : posts.length > 0 ? (
-        <div>
+        <div className="flex flex-wrap items-center justify-center gap-5 2xl:w-10/12 w-full mt-7">
           {posts.map((post) => {
             return <Product key={post.id} post={post}></Product>;
           })}
