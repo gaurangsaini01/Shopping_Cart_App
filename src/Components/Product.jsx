@@ -31,11 +31,11 @@ function Product({ post }) {
         <div>
           <p className="text-green-600 font-semibold">${post.price}</p>
         </div>
-        <div className="hover:bg-gray-700 hover:text-white transition duration-300 ease-in text-gray-700 border-2 border-gray-700 rounded-full font-semibold p-1 px-3 text-[12px]  tracking-wide">
+        <div className="hover:bg-gray-700 hover:text-white transition duration-300 ease-in text-gray-700 border-2 border-gray-700 rounded-full font-semibold p-1 px-3 text-[12px] w-[110px] text-center tracking-wide">
           {cart.some((cartItem) => cartItem.id === post.id) ? (
-            <button onClick={removeHandler}>Remove Item</button>
+            <button  onClick={removeHandler}>Remove Item</button>
           ) : (
-            <button onClick={addHandler}>Add to Cart</button>
+            <button  onClick={addHandler}>Add to Cart</button>
           )}
         </div>
       </div>

@@ -22,7 +22,7 @@ function Home() {
   }, []);
 
   return (
-    <div className="w-full flex justify-center items-center">
+    <div className="w-full flex justify-center items-center ">
       {loading ? (
         <Spinner></Spinner>
       ) : posts.length > 0 ? (
