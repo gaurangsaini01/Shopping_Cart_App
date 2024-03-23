@@ -24,7 +24,7 @@ function Home() {
   return (
     <div className="w-full flex justify-center items-center ">
       {loading ? (
-        <Spinner></Spinner>
+        <div className="h-[100vh] flex justify-center items-center"><Spinner></Spinner></div>
       ) : posts.length > 0 ? (
         <div className="flex flex-wrap items-center justify-center gap-5 2xl:w-10/12 w-full mt-7">
           {posts.map((post) => {
